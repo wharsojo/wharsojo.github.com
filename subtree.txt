@@ -1,4 +1,4 @@
 <li><span>From Ajax</span></li>
-<li><span>Item 1.1</span></li>
-<li><span>Item 1.1</span></li>
-<li><span>Item 1.1</span><ul></ul></li>
+<li grp="local"><span>PopUp:Delegate me!</span></li>
+<li><span>I'am Infinite Tree</span><ul></ul></li>
+<li><span>TADA...</span></li>
