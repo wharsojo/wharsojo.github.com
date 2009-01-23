@@ -6,14 +6,16 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.live.tree.js"></script>
   <script>
-  function asli(){
-    alert('folder:'+this.tree.children('span').text());
+  function custome_close(){
+    alert('custome_close:'+this.node.children('span').text());
   };
-  
+  function ganti(){
+    $.liveTree.click['w1:hit:close'] = custome_close;
+  }
   $(function(){
 //  $.liveTree.click['w1:grp:local'] = asli;
     $.liveTree.click['w1:hit:empty'] = function(){
-      return this.getTree('lionly');
+      return this.getTree('subtree.txt');
 /*    var xx = this.node.children('ul:eq(0)');
       $.get('lionly',function(data){
         xx.html(data);
@@ -21,7 +23,7 @@
       });
       return true;*/
     };
-/*    $.liveTree.click['w1:hit:close'] = function(){
+    $.liveTree.click['w1:hit:close'] = function(){
       alert('closing!');               return true;
     };/*
     $.liveTree.click.tree = function(){
@@ -80,46 +82,4 @@
       </ul>
 		</li>
   </ul>
-  
-	<ul id="browser" class="filetree treeview">
-
-		<li class="collapsable lastCollapsable"><div class="hitarea collapsable-hitarea lastCollapsable-hitarea"></div><span class="folder">Folder 1</span>
-			<ul style="display: block;">
-				<li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span class="folder">Item 1.1</span>
-					<ul style="display: block;">
-						<li class="last"><span class="file">Item 1.1.1</span></li>
-					</ul>
-				</li>
-
-				<li class="collapsable"><div class="hitarea collapsable-hitarea"></div><span class="folder">Folder 2</span>
-					<ul style="display: block;">
-						<li class="collapsable"><div class="hitarea collapsable-hitarea "></div><span class="folder">Subfolder 2.1</span>
-							<ul id="folder21">
-								<li><span class="file">File 2.1.1</span></li>
-								<li class="last"><span class="file">File 2.1.2</span></li>
-							</ul>
-
-						</li>
-						<li class="collapsable lastCollapsable"><div class="hitarea collapsable-hitarea lastCollapsable-hitarea "></div><span class="folder">Subfolder 2.2</span>
-							<ul>
-								<li><span class="file">File 2.2.1</span></li>
-								<li class="last"><span class="file">File 2.2.2</span></li>
-							</ul>
-						</li>
-
-					</ul>
-				</li>
-				<li class="closed expandable"><div class="hitarea closed-hitarea expandable-hitarea "></div><span class="folder">Folder 3 (closed at start)</span>
-					<ul style="display: none;">
-						<li class="last"><span class="file">File 3.1</span></li>
-					</ul>
-				</li>
-				<li class="last"><span class="file">File 4</span></li>
-
-			</ul>
-		</li>
-	</ul>
-	
-</div>
- 
 </body></html>
