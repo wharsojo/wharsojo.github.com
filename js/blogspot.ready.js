@@ -3,7 +3,7 @@ $(function(){
   obj.each(function(){
      var  css= $(this);
      var  txt= css.html().replace(/<br>/gi,'').replace(/<br \/>/gi,'');
-     css.parent().prepend(txt);
+     css.parent().prepend('<style>'+txt+'</style>');
   })
   
   var obj= $('pre.eval');
