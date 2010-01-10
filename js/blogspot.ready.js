@@ -12,7 +12,7 @@ $(function(){
   });
   
   $('pre.eval').each(function(){
-     eval($(this).html().replace(rgx,''));
+     eval($(this).html().replace(rgx,'').replace(/&gt;/,'>'));
   });
   SyntaxHighlighter.config.bloggerMode = true;
   SyntaxHighlighter.all();
