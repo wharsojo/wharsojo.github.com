@@ -11,9 +11,12 @@ $(function(){
      css.parent().prepend('<style>'+txt+'</style>');
   });
   
+  var scp= '';
   $('pre.eval').each(function(){
-     eval($(this).html().replace(rgx,'').replace(/&gt;/gi,'>'));
+     scp+= $(this).html().replace(rgx,'').replace(/&gt;/gi,'>');
   });
+  alert(scp);
+  eval(scp);
   SyntaxHighlighter.config.bloggerMode = true;
   SyntaxHighlighter.all();
 });
