@@ -12,11 +12,10 @@ $(function(){
   });
   
   var scp= '';
-  $('pre.eval').each(function(){
+  var evl= $('pre.eval');  alert(evl.length);
+  evl.each(function(){
      scp+= $(this).html().replace(rgx,'').replace(/&gt;/gi,'>');
   });
-  alert(scp);
-  eval(scp);
   SyntaxHighlighter.config.bloggerMode = true;
   SyntaxHighlighter.all();
 });
