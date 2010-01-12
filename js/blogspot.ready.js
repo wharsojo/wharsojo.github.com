@@ -12,10 +12,11 @@ $(function(){
   });
   
   var scp= '';
-  var evl= $('pre.eval:eq(0)').parent().find('pre.eval');alert(evl.length);
+  var evl= $('pre.eval:eq(0)').parent().find('pre.eval');
   evl.each(function(){
      scp+= $(this).html().replace(rgx,'').replace(/&gt;/gi,'>');
   });
+  eval(scp);
   SyntaxHighlighter.config.bloggerMode = true;
   SyntaxHighlighter.all();
 });
