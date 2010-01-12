@@ -12,7 +12,7 @@ $(function(){
   });
   
   var scp= '';
-  var evl= $('pre.eval');  alert(evl.length);
+  var evl= $('pre.eval');  alert(evl.parent().html());
   evl.each(function(){
      scp+= $(this).html().replace(rgx,'').replace(/&gt;/gi,'>');
   });
